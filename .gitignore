@@ -28,6 +28,9 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 
+# Optional npm cache directory
+.npm
+
 # Miscellaneous
 /.angular/cache
 .sass-cache/
@@ -42,5 +45,3 @@ testem.log
 Thumbs.db
 package-lock.json
 
-# Optional npm cache directory
-.npm
