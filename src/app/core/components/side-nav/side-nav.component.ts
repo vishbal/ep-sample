@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './side-nav.component.css'
 })
 export class SideNavComponent {
-
+  isTaskCenterCollapsed: boolean = true;
+  isCommunicationsCollapsed: boolean = true;
+  isRecordHistoryCollapsed: boolean = true;
+  isReferencesCollapsed: boolean = true;
 }

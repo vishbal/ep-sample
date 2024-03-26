@@ -1,3 +1,9 @@
 .navbar-toggler-icon {
     background-color: #333; /* Customize the hamburger icon color */
   }
+
+a {
+  color: aliceblue;
+  text-decoration: none;
+  cursor: pointer;
+}

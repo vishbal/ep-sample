@@ -1,40 +1,91 @@
 <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDark"
     aria-labelledby="offcanvasDarkLabel">
     <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasDarkLabel">Environmental Platform</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-            aria-label="Close"></button>
+        <i class="bi bi-list" style="font-size: 1rem;"></i>&nbsp;
+        <h5 class="offcanvas-title fs-4" id="offcanvasDarkLabel">Environmental Platform</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
         <ul class="navbar-nav mb-2 mb-lg-0">
-            <li aria-current="page">
-              <i class="caret"></i>Task Center
-              <ul class="navbar-nav mb-4 mb-lg-2">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" routerLink="#">Task 1</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" routerLink="#">Task 2</a>
-                </li>
-              </ul>
-              <a class="nav-link" aria-current="page" routerLink="#">Task Center</a>
+            <li class="nav-item fs-5">
+                <a data-toggle="collapse" aria-expanded="false" (click)="isTaskCenterCollapsed = !isTaskCenterCollapsed"
+                    class="dropdown-toggle">
+                    Task Center
+                </a>
+                <ul [ngClass]="{'collapse ': isTaskCenterCollapsed,
+            'expanded': !isTaskCenterCollapsed}" class="list-unstyled components ps-4 mb-2 mb-lg-0 fs-6">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="#">My Tasks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="#">Templates</a>
+                    </li>
+                </ul>
+            </li>            <li class="nav-item fs-5">
+                <a class="nav-link" routerLink="#">Event Calendar</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" routerLink="#">Event Calendar</a>
+
+            <li class="nav-item fs-5">
+                <a data-toggle="collapse" aria-expanded="false"
+                    (click)="isCommunicationsCollapsed = !isCommunicationsCollapsed" class="dropdown-toggle">
+                    Communications</a>
+                <ul [ngClass]="{'collapse ': isCommunicationsCollapsed,
+            'expanded': !isCommunicationsCollapsed}" class="list-unstyled components ps-4 mb-2 mb-lg-0 fs-6"
+                    id="communications">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="#">Notifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="#">Messaging</a>
+                    </li>
+                </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="#">Communications</a>
+
+            <li class="nav-item fs-5">
+                <a data-toggle="collapse" aria-expanded="false"
+                    (click)="isRecordHistoryCollapsed = !isRecordHistoryCollapsed" class="dropdown-toggle">
+                    Record History</a>
+                <ul [ngClass]="{'collapse ': isRecordHistoryCollapsed,
+            'expanded': !isRecordHistoryCollapsed}" class="list-unstyled components ps-4 mb-2 mb-lg-0 fs-6">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="#">Regulatory Actions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="#">Tracking</a>
+                    </li>
+                </ul>
+
             </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="#">Record History</a>
+            <li class="nav-item fs-5">
+                <a class="nav-link" routerLink="#">Directory</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="#">Directory</a>
+
+            <li class="nav-item fs-5">
+                <a data-toggle="collapse" aria-expanded="false" (click)="isReferencesCollapsed = !isReferencesCollapsed"
+                    class="dropdown-toggle">
+                    References</a>
+                <ul [ngClass]="{'collapse ': isReferencesCollapsed,
+              'expanded': !isReferencesCollapsed}" class="list-unstyled components ps-4 mb-2 mb-lg-0 fs-6">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="#">Policies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="#">Guides</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="#">Training Curriculum</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="#">Facility Diagrams</a>
+                    </li>
+                </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="#">Permissions</a>
+
+
+            <li class="nav-item fs-5">
+                <a class="nav-link" routerLink="#">Permissions</a>
             </li>
-          </ul>
+        </ul>
 
 
     </div>
