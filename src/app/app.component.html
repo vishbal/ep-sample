@@ -1,7 +1,57 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <h2>Environmental Platform..</h2>
+<!-- <nav class="navbar fixed-top bg-body-tertiary">
+  
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand company-logo" routerLink="#">
+      <img src="https://s3-alpha.figma.com/profile/10715a8e-9ce7-4cd8-9ead-4dbce2af77ed"
+        style="height: 20px;width:20px">
+    </a>
+    Environmental Platform..
+    <div class="pe-2">
+      <div class="d-flex">
+        <div class="collapse-icon" *ngIf="showSidebar" (click)="sidebarCollapse()">
+          <i class="pi pi-align-right"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li aria-current="page">
+          <i class="caret"></i>Task Center
+          <ul class="navbar-nav mb-4 mb-lg-2">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" routerLink="#">Task 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" routerLink="#">Task 2</a>
+            </li>
+          </ul>
+          <a class="nav-link" aria-current="page" routerLink="#">Task Center</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" routerLink="#">Event Calendar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="#">Communications</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="#">Record History</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="#">Directory</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="#">Permissions</a>
+        </li>
+      </ul>
     </div>
   </div>
-</div>
+</nav> -->
+
+<!-- <app-header></app-header> -->
+<app-side-nav></app-side-nav>
+<router-outlet></router-outlet>

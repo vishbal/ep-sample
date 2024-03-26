@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ep-sample';
+  showSidebar: boolean = false;
+
+  sidebarCollapse() {
+    this.showSidebar = !this.showSidebar;
+  }
+
 }
