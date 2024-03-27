@@ -8,12 +8,13 @@
     <div class="navbar bg-light" style="width: 80vw;">
         <div class="container nav-container">
 
-            <span class="navbar-brand mb-0 h2 justify-content-start fs-4">
+            <span class="navbar-brand mb-0 h2 justify-content-start ">
                 <a class="navbar-brand" href="#offcanvasDark" data-bs-toggle="offcanvas" role="button"
                     aria-controls="offcanvasDark">
                     <i class="bi bi-list popover-icon"></i>
                 </a>
-                Environmental Platform</span>
+                <a class="navbar-brand fs-4" [routerLink]="['/']">Environmental Platform</a>
+            </span>
         </div>
     </div>
     <div class="col-md-2">
@@ -23,13 +24,12 @@
         </button>&nbsp;
 
         <button type="button" class="btn btn-outline-secondary" placement="bottom"
-            ngbPopover="Great!! You are caught with all.. Come back to see for any upcoming events in your calendar." 
+            ngbPopover="Great!! You are caught with all.. Come back to see for any upcoming events in your calendar."
             popoverTitle="EVENTS">
             <i class="bi bi-calendar2-x popover-icon"></i>
         </button>&nbsp;
 
-        <button type="button" class="btn btn-outline-secondary" placement="bottom-end"
-            [ngbPopover]="helpPopoverContent"
+        <button type="button" class="btn btn-outline-secondary" placement="bottom-end" [ngbPopover]="helpPopoverContent"
             popoverTitle="HELP" popoverClass="help-popover">
             <i class="bi bi-question popover-icon"></i>
         </button>&nbsp;

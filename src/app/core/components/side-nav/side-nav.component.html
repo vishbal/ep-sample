@@ -1,4 +1,4 @@
-<div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDark"
+<div class="offcanvas offcanvas-start text-bg-dark" data-bs-scroll="true"  tabindex="-1" id="offcanvasDark"
     aria-labelledby="offcanvasDarkLabel">
     <div class="offcanvas-header">
         <i class="bi bi-list" style="font-size: 1rem;"></i>&nbsp;
@@ -8,21 +8,22 @@
     <div class="offcanvas-body">
         <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item fs-5">
-                <a data-toggle="collapse" aria-expanded="false" (click)="isTaskCenterCollapsed = !isTaskCenterCollapsed"
+                <a data-toggle="collapse" aria-expanded="false" 
+                (click)="isTaskCenterCollapsed = !isTaskCenterCollapsed"
                     class="dropdown-toggle">
                     Task Center
                 </a>
                 <ul [ngClass]="{'collapse ': isTaskCenterCollapsed,
             'expanded': !isTaskCenterCollapsed}" class="list-unstyled components ps-4 mb-2 mb-lg-0 fs-6">
                     <li class="nav-item">
-                        <a class="nav-link" routerLink="#">My Tasks</a>
+                        <a class="nav-link" [routerLink]="['/my-tasks']">My Tasks</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" routerLink="#">Templates</a>
+                        <a class="nav-link" [routerLink]="['/templates']">Templates</a>
                     </li>
                 </ul>
             </li>            <li class="nav-item fs-5">
-                <a class="nav-link" routerLink="#">Event Calendar</a>
+                <a class="nav-link" [routerLink]="['/event-calendar']">Event Calendar</a>
             </li>
 
             <li class="nav-item fs-5">
@@ -33,10 +34,10 @@
             'expanded': !isCommunicationsCollapsed}" class="list-unstyled components ps-4 mb-2 mb-lg-0 fs-6"
                     id="communications">
                     <li class="nav-item">
-                        <a class="nav-link" routerLink="#">Notifications</a>
+                        <a class="nav-link" [routerLink]="['/notifications']">Notifications</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" routerLink="#">Messaging</a>
+                        <a class="nav-link" [routerLink]="['/messages']">Messaging</a>
                     </li>
                 </ul>
             </li>
@@ -48,16 +49,16 @@
                 <ul [ngClass]="{'collapse ': isRecordHistoryCollapsed,
             'expanded': !isRecordHistoryCollapsed}" class="list-unstyled components ps-4 mb-2 mb-lg-0 fs-6">
                     <li class="nav-item">
-                        <a class="nav-link" routerLink="#">Regulatory Actions</a>
+                        <a class="nav-link" [routerLink]="['/regulatory-actions']">Regulatory Actions</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" routerLink="#">Tracking</a>
+                        <a class="nav-link" [routerLink]="['/tracking']">Tracking</a>
                     </li>
                 </ul>
 
             </li>
             <li class="nav-item fs-5">
-                <a class="nav-link" routerLink="#">Directory</a>
+                <a class="nav-link" [routerLink]="['/directory']">Directory</a>
             </li>
 
             <li class="nav-item fs-5">
@@ -67,23 +68,23 @@
                 <ul [ngClass]="{'collapse ': isReferencesCollapsed,
               'expanded': !isReferencesCollapsed}" class="list-unstyled components ps-4 mb-2 mb-lg-0 fs-6">
                     <li class="nav-item">
-                        <a class="nav-link" routerLink="#">Policies</a>
+                        <a class="nav-link" [routerLink]="['/policies']">Policies</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" routerLink="#">Guides</a>
+                        <a class="nav-link" [routerLink]="['/guides']">Guides</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" routerLink="#">Training Curriculum</a>
+                        <a class="nav-link" [routerLink]="['/training-curriculum']">Training Curriculum</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" routerLink="#">Facility Diagrams</a>
+                        <a class="nav-link" [routerLink]="['/facility-diagrams']">Facility Diagrams</a>
                     </li>
                 </ul>
             </li>
 
 
             <li class="nav-item fs-5">
-                <a class="nav-link" routerLink="#">Permissions</a>
+                <a class="nav-link" [routerLink]="['/permissions']">Permissions</a>
             </li>
         </ul>
 

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './core/components/home/home.component';
+import { NotFoundComponent } from './core/components/not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -8,9 +9,13 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
+    path: 'not-found',
+    component: NotFoundComponent
+  },
+  {
     path: '**',
     pathMatch: 'full',
-    component: HomeComponent
+    redirectTo: 'not-found'
   }
 ];
 
