@@ -5,22 +5,76 @@
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
-    <div class="navbar bg-light" style="width: 90%;">
-        <div class="container" tyle="width: 85%;text-align: left;">
+    <div class="navbar bg-light" style="width: 80vw;">
+        <div class="container nav-container">
 
             <span class="navbar-brand mb-0 h2 justify-content-start fs-4">
                 <a class="navbar-brand" href="#offcanvasDark" data-bs-toggle="offcanvas" role="button"
                     aria-controls="offcanvasDark">
-                    <i class="bi bi-list" style="font-size: 1.5rem;"></i>
+                    <i class="bi bi-list popover-icon"></i>
                 </a>
                 Environmental Platform</span>
         </div>
     </div>
-    <div>
-        <i class="bi bi-envelope" style="font-size: 1.5rem;"></i>&nbsp;
-        <i class="bi bi-calendar2-x" style="font-size: 1.5rem;"></i>&nbsp;
-        <i class="bi bi-question" style="font-size: 1.5rem;"></i>&nbsp;
-        <i class="bi bi-person-fill" style="font-size: 1.5rem;"></i>
+    <div class="col-md-2">
+        <button type="button" class="btn btn-outline-secondary" placement="bottom-end" 
+            ngbPopover="All notifications will be listed here." popoverTitle="Notifications">
+            <i class="bi bi-envelope popover-icon"></i>
+        </button>&nbsp;
+        
+        <button type="button" class="btn btn-outline-secondary" placement="bottom"
+            ngbPopover="See here upcoming events in your calendar." popoverTitle="Events">
+            <i class="bi bi-calendar2-x popover-icon"></i>
+        </button>
+        &nbsp;
+
+        <button type="button" class="btn btn-outline-secondary" placement="bottom-end"
+        data-bs-target="helpPopoverContent" data-bs-toggle="popover"
+            [ngbPopover]="helpPopoverContent" popoverTitle="HELP" popoverClass="help-popover">
+            <i class="bi bi-question popover-icon"></i>
+        </button>
+        
+        &nbsp;
+
+        <button type="button" class="btn btn-outline-secondary" placement="bottom-end"
+            ngbPopover="Your Account details.." popoverTitle="Account">
+            <i class="bi bi-person-fill popover-icon"></i>
+        </button>
+        
     </div>
 </nav>
 <app-side-nav id="#offcanvasDark"></app-side-nav>
+
+<!-- Help Menu -->
+<ng-template #helpPopoverContent>
+    <help></help>
+
+    <table class="help-popover">
+        <tbody>
+            <tr>
+                <td class="col-sm-2"><i class="bi bi-telephone help-icon"></i></td>
+                <td>24-Hr Emergency Spill <br/><a href="#">682-275-3124</a></td>
+            </tr>
+            <tr>
+                <td><i class="bi bi-telephone help-icon"></i></td>
+                <td>Heritage Emergency Spill <br/><a href="#">1-800-48-SPILL</a></td>
+            </tr>
+            <tr>
+                <td><i class="bi bi-box-arrow-up-right help-icon"></i></td>
+                <td><a href="#">Employee Spill Response Chart</a></td>
+            </tr>
+            <tr>
+                <td><i class="bi bi-box-arrow-up-right help-icon"></i></td>
+                <td><a href="#">Lead EC Spill Response Chart</a></td>
+            </tr>
+            <tr>
+                <td><i class="bi bi-box-arrow-up-right help-icon"></i></td>
+                <td><a href="#">Help Resources</a></td>
+            </tr>
+            <tr>
+                <td><i class="bi bi-envelope help-icon"></i></td>
+                <td><a href="#">corporate.environmental&#64;aa.com</a></td>
+            </tr>
+        </tbody>
+    </table>
+  </ng-template>
