@@ -1,16 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  title = 'ep-sample';
-  showSidebar: boolean = false;
+export class AppComponent implements OnInit {
+  title: string = '';
 
-  sidebarCollapse() {
-    this.showSidebar = !this.showSidebar;
+  constructor(private titleSvc: Title) { }
+
+  ngOnInit(): void {
+    this.titleSvc.setTitle('Environmental Platform')
+    this.title = this.titleSvc.getTitle();
   }
+
 
 }
