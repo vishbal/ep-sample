@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, VERSION } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -14,4 +14,5 @@ export class SideNavComponent {
   isCommunicationsCollapsed: boolean = true;
   isRecordHistoryCollapsed: boolean = true;
   isReferencesCollapsed: boolean = true;
+  angularVersion = VERSION.full;
 }
